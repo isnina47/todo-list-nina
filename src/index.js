@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.css'; // ✅ 引入 Tailwind 的 CSS 指令
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

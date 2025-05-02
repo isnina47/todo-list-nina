@@ -1,0 +1,8 @@
+{
+    "extends": ["react-app", "plugin:react/recommended", "prettier"],  //使用 create-react-app 內建設定
+    "plugins": ["react", "react-hooks"], //加上 React 與 Prettier 的推薦設定
+    "rules": {
+      "react/prop-types": "off"  //關閉不必要的規則（例如 prop-types，因為你可能用 TypeScript 或只測試用）
+    }
+  }
+  
