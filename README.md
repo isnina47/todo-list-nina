@@ -27,7 +27,7 @@
 
 ## 📁 專案結構
 
-todo-list-demo/
+<pre> ```todo-list-demo/
 ├── public/
 ├── index.html # ✅ React 應用的 HTML 模板，React 會將組件掛載到此處。
 ├── todo-icon.svg # ✅ 自訂的 favicon 圖示，會在瀏覽器頁籤顯示
@@ -51,7 +51,7 @@ todo-list-demo/
 │ └── index.css # Tailwind CSS 指令 + 自訂樣式（含 scrollbar）
 ├── tailwind.config.js # Tailwind 自訂主題設定
 ├── package.json # 套件管理與啟動指令
-└── README.md # 專案說明文件
+└── README.md # 專案說明文件```</pre>
 
 ## 🚀 專案啟動方式
 
