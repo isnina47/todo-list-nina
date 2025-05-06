@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 自訂 scrollbar 樣式 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px; /* 滾動條寬度 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #b7c0f2; /* 滾輪顏色 */
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* 無背景 */
+}
+
+/* 隱藏上下箭頭 */
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
