@@ -27,10 +27,11 @@ function App() {
   // 判斷是否所有項目都已勾選完成（才能刪除全部），啟用 Delete All 按鈕
   const canDelete = todos.length > 0 && todos.every((todo) => todo.done);
 
-  // 根據 sortDoneLast 狀態，動態產生排序後的 todo 清單
+  // 根據 sortDoneLast 狀態，決定是否將「已完成的待辦事項排到清單底部」
   const sortedTodos = sortDoneLast
     ? [...todos.filter((todo) => !todo.done), ...todos.filter((todo) => todo.done)]
     : todos;
+  // [...A, ...B] 將陣列A跟B的所有元素展開 合併成新的陣列
 
   // 新增一筆代辦事項
   const handleAddTodo = (text) => {

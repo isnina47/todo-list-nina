@@ -10,6 +10,11 @@ import TodoItem from './TodoItem';
  * - todos：待辦事項陣列
  * - onToggle：勾選切換完成狀態的處理函式
  * - onDelete：刪除單一項目的處理函式
+ *
+ * * useRef
+ * 可以使用 useRef 將 DOM 回傳，而被 useRef 回傳的是一個裡面只有 current 屬性的 ref object，可以得到首次 render 時的 DOM 節點。
+ * useRef 也可以用來儲存資料或抓以前的值
+ *
  */
 function TodoList({ todos, onToggle, onDelete }) {
   const scrollRef = useRef(null); // 指向滾動區塊的 DOM
