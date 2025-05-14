@@ -11,6 +11,9 @@ function App() {
   const [todos, setTodos] = useState(() => {
     const stored = localStorage.getItem('todos');
     return stored ? JSON.parse(stored) : [];
+    // 讀取 localStorage 中 key 為 "todos" 的資料
+    // 若有資料，透過 JSON.parse 轉成陣列
+    // 若沒有，就回傳空陣列 []
   });
 
   // 每次 todos 變更時自動儲存 localStorage
