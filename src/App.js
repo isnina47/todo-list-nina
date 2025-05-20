@@ -72,9 +72,11 @@ function App() {
   const allDone = todos.length > 0 && todos.every((todo) => todo.done);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#e1eff9] to-[#d9dfff] py-10">
+    <div className="min-h-screen bg-gradient-to-b from-[#FFFBEA] to-[#fff4c6] py-10">
       {/* 頁面標題 */}
       <Header />
+      {/* 輸入新增代辦事項 */}
+      <TodoInput onAdd={handleAddTodo} />
       {/* 進度條 */}
       <ProgressBar todos={todos} />
       {/* 清單區塊（含勾選與刪除） */}
@@ -90,8 +92,6 @@ function App() {
       />
       {/* 切換已完成項目排序 */}
       <ToggleDoneSort value={sortDoneLast} onToggle={() => setSortDoneLast(!sortDoneLast)} />
-      {/* 輸入新增代辦事項 */}
-      <TodoInput onAdd={handleAddTodo} />
     </div>
   );
 }

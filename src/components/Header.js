@@ -1,4 +1,4 @@
-import React from 'react';
+
 /*
  * Header 元件：顯示網站上方的標題、描述與底線裝飾
  */
@@ -9,8 +9,6 @@ function Header() {
     <div className="w-full max-w-xl mx-auto px-6  text-text mb-6">
       {/* 主標題 */}
       <h1 className="text-4xl mb-1">Todo List</h1>
-      {/* 副標題 */}
-      <p className="text-sm text-[#9b9fb2]">Add things to do</p>
       {/* 底部水平線：粗邊框（border-t-thick自訂於 tailwind.config.js ） */}
       <hr className="border-t-thick border-primary  mt-2 mx-auto" />
     </div>

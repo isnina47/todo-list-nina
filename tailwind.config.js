@@ -6,14 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#7790d0', // 自定義主色（按鈕、checkbox 主色等用這個）
-        text: '#444c85', // 自定義文字顏色（用在標題、副標題）
+        primary: '#FB923C', // 自定義主色（按鈕、主色等用這個）
+        text: '#1F2937', // 自定義文字顏色（用在標題、副標題）
+        done:'#ADADAD', // 已完成文字 側邊條 checkbox
+        primaryhover:'#FACC15'
       },
       borderColor: {
-        primary: '#adb9da', // 自訂邊框顏色
+        primary: '#FDE68A', // 自訂邊框顏色
       },
       borderWidth: {
-        DEFAULT: '1px', // 設定預設邊框寬度為 1px（Tailwind 預設也是這個)
+        DEFAULT: '1px', // 設定預設邊框寬度為 1px（Tailwind 預設)
         thick: '2px', // 新增名為 `border-t-thick` 的樣式，其寬度為 2px
       },
     },

@@ -17,10 +17,10 @@ function ProgressBar({ todos }) {
         <span className="text-text font-medium">{percent}%</span>
 
         {/* ✅ 進度條背景條（白色） */}
-        <div className="w-full bg-white rounded-full h-4 ">
+        <div className="w-full bg-white rounded-full h-4 shadow ">
           {/* ✅ 實際的紫色進度條，根據 percent 動態設定寬度 */}
           <div
-            className="bg-[#95acf9] h-4 rounded-full transition-all duration-300"
+            className="bg-[#FDBA74] h-4 rounded-full transition-all duration-300"
             style={{ width: `${percent}%` }}
           ></div>
         </div>

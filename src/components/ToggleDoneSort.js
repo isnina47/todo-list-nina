@@ -21,7 +21,7 @@ function ToggleDoneSort({ value, onToggle }) {
         <label className="relative inline-flex items-center cursor-pointer">
           {/* // sr-only 隱藏視覺，peer 提供狀態給兄弟元素使用 */}
           <input type="checkbox" checked={value} onChange={onToggle} className="sr-only peer" />
-          <div className="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-[#b7c0f2] transition-all duration-400"></div>
+          <div className="w-11 h-6 bg-done rounded-full peer peer-checked:bg-primary transition-all duration-400"></div>
           {/* translate-x-5 讓白色圓點在切換時左右滑動，根據 checkbox 狀態移動位置 */}
           <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
         </label>

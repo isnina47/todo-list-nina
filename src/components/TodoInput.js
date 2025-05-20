@@ -36,7 +36,7 @@ function TodoInput({ onAdd }) {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto px-6 mt-24">
+    <div className="w-full max-w-xl mx-auto px-6 mb-10 ">
       {/* 輸入欄標籤 */}
       <label htmlFor="todo-input" className="block text-text text-sm mb-2">
         Add to list
@@ -56,7 +56,7 @@ function TodoInput({ onAdd }) {
         {/* + 按鈕：使用 SVG 畫出加號 */}
         <button
           onClick={handleAdd}
-          className="w-14 h-12 bg-primary hover:brightness-110 transition-all duration-200
+          className="w-14 h-12 bg-primary hover:bg-primaryhover transition-all duration-200
  text-white text-3xl font-bold flex items-center justify-center rounded-md shadow"
         >
           <svg
