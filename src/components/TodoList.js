@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import TodoItem from './TodoItem';
 
 /**
@@ -16,7 +16,7 @@ import TodoItem from './TodoItem';
  * useRef 也可以用來儲存資料或抓以前的值
  *
  */
-function TodoList({ todos, onToggle, onDelete }) {
+function TodoList({ todos, onToggle, onDelete, noMatch }) {
   const scrollRef = useRef(null); // 指向滾動區塊的 DOM
   const prevLength = useRef(todos.length); // 儲存上一次 todos 長度，用來判斷是否為「新增」
 
@@ -39,10 +39,10 @@ function TodoList({ todos, onToggle, onDelete }) {
       ref={scrollRef}
       className="max-h-80 overflow-y-auto px-6 mx-auto mt-6 w-full max-w-xl custom-scrollbar"
     >
-      {/*  空清單提示 檢查是否為空清單，顯示提示訊息 */}
+      {/*  空清單提示 + 搜尋空結果提示 */}
       {todos.length === 0 && (
         <div className="text-center text-lg text-[#9b9fb2] py-6">
-          Let&apos;s add your first task!
+          {noMatch ? 'No matching todos found 😢' : "Let's add your first task!"}
         </div>
       )}
 

@@ -8,11 +8,11 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #FDBA74; /* 滾輪顏色 */
+  background-color: #fdba74; /* 滾輪顏色 */
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #FB923C;
+  background-color: #fb923c;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent; /* 無背景 */
@@ -21,4 +21,12 @@
 /* 隱藏上下箭頭 */
 .custom-scrollbar::-webkit-scrollbar-button {
   display: none;
+}
+
+/* 清除 SweetAlert2 預設的圖示樣式 */
+.swal2-icon.custom-icon-class {
+  border: none !important;
+  background: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
 }

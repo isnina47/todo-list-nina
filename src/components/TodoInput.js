@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
-
+import { useState, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 /**
  * TodoInput 元件：
  * 提供使用者輸入待辦事項的輸入欄與新增按鈕。
@@ -51,25 +52,16 @@ function TodoInput({ onAdd }) {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           placeholder="e.g. Learn React, Build a project..."
-          className="flex-1 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary h-13"
+          className="flex-1 px-4 py-3 border border-gray-300 bg-white/80 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300"
         />
         {/* + 按鈕：使用 SVG 畫出加號 */}
         <button
           onClick={handleAdd}
-          className="w-14 h-12 bg-primary hover:bg-primaryhover transition-all duration-200
- text-white text-3xl font-bold flex items-center justify-center rounded-md shadow"
+          aria-label="Add todo"
+          className="w-12 h-12 bg-primary hover:brightness-110 transition-all duration-200
+        text-white text-3xl font-bold flex items-center justify-center rounded-md shadow"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={3}
-            strokeLinecap="round" //讓加號的邊緣圓滑，不是直角
-          >
-            <path d="M12 5v14M5 12h14" />
-          </svg>
+          <FontAwesomeIcon icon={faPlus} className="w-5 h-5" />
         </button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 /**
  * TodoControls 元件：
  * 控制待辦事項的群組操作，包括：
@@ -21,7 +22,7 @@ function TodoControls({ onSelectAll, onDeselectAll, onDeleteAll, hasTodos, allDo
             onChange={onSelectAll}
             className="peer hidden" //隱藏原先checkbox
           />
-           <div className="w-5 h-5 rounded border-2 border-done flex items-center justify-center peer-checked:bg-primary transition">
+          <div className="w-5 h-5 rounded border-2 border-done flex items-center justify-center peer-checked:bg-primary transition-colors duration-300">
             {/* 自訂checkbox樣式 不顯示勾勾（未選中） */}
           </div>
           <span className="text-text">Select All</span>
@@ -38,16 +39,8 @@ function TodoControls({ onSelectAll, onDeselectAll, onDeleteAll, hasTodos, allDo
             className="peer hidden" //隱藏原先checkbox
           />
           {/* 自訂checkbox格式 */}
-          <div className="w-5 h-5 rounded border-2 border-done flex items-center justify-center peer-checked:bg-primary transition">
-            <svg
-              className="w-4 h-4 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={4}
-            >
-              <path d="M5 13l4 4L19 7" />
-            </svg>
+          <div className="w-5 h-5 rounded border-2 border-done flex items-center justify-center peer-checked:bg-primary transition-colors duration-300">
+            <FontAwesomeIcon icon={faCheck} className="w-4 h-4 text-white" />
           </div>
           <span className="text-text">Deselect All</span>
         </label>
@@ -61,21 +54,32 @@ function TodoControls({ onSelectAll, onDeselectAll, onDeleteAll, hasTodos, allDo
             Swal.fire({
               title: 'Are you sure?',
               text: 'This will delete all todo items.',
-              icon: 'warning',
+              iconHtml: `<i class="fa-solid fa-exclamation-triangle text-yellow-500 text-7xl"></i>`,
               showCancelButton: true,
               confirmButtonColor: '#d33',
               cancelButtonColor: '#aaa',
               confirmButtonText: 'Yes',
+              customClass: {
+                icon: 'custom-icon-class', // 讓sweetalert 不套用預設 icon 樣式
+              },
             }).then((result) => {
               if (result.isConfirmed) {
                 onDeleteAll(); // ⚠️執行刪除
-                Swal.fire('Deleted!', 'All todos have been removed.', 'success');
+                Swal.fire({
+                  title: 'Deleted!',
+                  text: 'All todos have been removed.',
+                  iconHtml: `<i class="fa-solid fa-trash-can text-lime-500 text-7xl animate-pulse"></i>`,
+                  customClass: {
+                    icon: 'custom-icon-class',
+                  },
+                });
               }
             });
           }}
           className="bg-rose-400 hover:bg-rose-500 text-white text-sm px-3 py-1 rounded shadow transition"
         >
           Delete All
+          <FontAwesomeIcon icon={faXmark} className="w-4 h-4 pl-1" />
         </button>
       )}
     </div>

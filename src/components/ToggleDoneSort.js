@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * ToggleDoneSort 元件：
  * 顯示一個切換開關，用來控制是否將已完成的事項移到列表底部。
@@ -20,10 +19,17 @@ function ToggleDoneSort({ value, onToggle }) {
         {/* 開關外層標籤：為 checkbox 提供可點擊範圍與樣式 */}
         <label className="relative inline-flex items-center cursor-pointer">
           {/* // sr-only 隱藏視覺，peer 提供狀態給兄弟元素使用 */}
-          <input type="checkbox" checked={value} onChange={onToggle} className="sr-only peer" />
-          <div className="w-11 h-6 bg-done rounded-full peer peer-checked:bg-primary transition-all duration-400"></div>
+          <input
+            type="checkbox"
+            checked={value}
+            onChange={onToggle}
+            className="sr-only peer"
+            aria-label="Move completed items to end"
+          />
+          {/* 加上 dark:bg- 讓切換器在深色模式下也有辨識度 */}
+          <div className="w-11 h-6 bg-done rounded-full peer peer-checked:bg-primary dark:bg-gray-600 dark:peer-checked:bg-primary transition-all duration-500"></div>
           {/* translate-x-5 讓白色圓點在切換時左右滑動，根據 checkbox 狀態移動位置 */}
-          <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
+          <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full  transition-all duration-500 peer-checked:translate-x-5"></div>
         </label>
       </div>
     </div>
