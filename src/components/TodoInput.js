@@ -52,7 +52,7 @@ function TodoInput({ onAdd }) {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           placeholder="e.g. Learn React, Build a project..."
-          className="flex-1 px-4 py-3 border border-gray-300 bg-white/80 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300"
+          className="flex-1 px-4 py-3 border border-gray-300 bg-white/80 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300 "
         />
         {/* + 按鈕：使用 SVG 畫出加號 */}
         <button
