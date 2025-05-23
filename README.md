@@ -39,6 +39,10 @@
 
 ![刪除提示](./public/screenshots/alert.png)
 
+## 🔗 線上預覽
+
+[Demo：Nina's React Todo List](https://isnina47.github.io/todo-list-nina/)
+
 📝 備註
 目前專案已具備完整的待辦清單核心功能。
 未來預計：
