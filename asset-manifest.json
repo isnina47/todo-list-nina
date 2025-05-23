@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo-list-nina/static/css/main.f5e66728.css",
+    "main.js": "/todo-list-nina/static/js/main.0cfebd7d.js",
+    "index.html": "/todo-list-nina/index.html",
+    "main.f5e66728.css.map": "/todo-list-nina/static/css/main.f5e66728.css.map",
+    "main.0cfebd7d.js.map": "/todo-list-nina/static/js/main.0cfebd7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5e66728.css",
+    "static/js/main.0cfebd7d.js"
+  ]
+}
